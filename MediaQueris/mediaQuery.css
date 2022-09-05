@@ -1,0 +1,84 @@
+/* ============================================>>>>> Start Navbar <<<<================================================= */
+@media (max-width: 991px) {
+    header nav .navbar-collapse {
+        position: absolute;
+        left: 10%;
+        top: 68px;
+        width: 80% !important;
+        text-align: center;
+        background-color: #222;
+        padding: 10px;
+        border-radius: 10px !important
+    }
+
+    header nav .nav-link::before {
+        display: none;
+    }
+
+    header nav li.nav-item:hover a.nav-link {
+        color: var(--main-color) !important;
+    }
+}
+
+/* ========================================>>>>> Start Home Section <<<<======================================= */
+@media (max-width: 768px) {
+    .home h1 {
+        font-size: 45px;
+    }
+
+    .home p {
+        font-size: 25px;
+    }
+}
+
+/* ========================================>>>>> Start About Section <<<<======================================= */
+
+@media (max-width: 767px) {
+    .about .about-box {
+        padding: 45px 20px !important;
+    }
+
+
+    .about .about-img {
+        margin-bottom: 20px !important;
+    }
+
+    .about .about-img img {
+        margin-bottom: 20px !important;
+
+}
+}
+
+/* ========================================>>>>> Start Portfolio Section <<<<======================================= */
+@media (max-width: 767px) {
+
+    .portfolio .card-info h5 {
+        font-size: 20px;
+    }
+
+    .portfolio .card-info p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px) {
+    .portfolio .card-info h5 {
+        font-size: 15px;
+    }
+
+    .portfolio .card-info p {
+        font-size: 11px;
+    }
+}
+
+/* ========================================>>>>> Start BLogs Section <<<<======================================= */
+@media (max-width: 767px) {
+    .blog .blog-body .card {
+        width: 100%;
+    }
+
+    .blog .blog-body .card:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+

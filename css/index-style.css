@@ -1,0 +1,544 @@
+/* ====================>>>>> Start General Rule <<<<======================= */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #0078ff;
+    --padding-section-top: 3.5rem;
+    --padding-section-bottom: 3.5rem;
+    --main-transition: .5s;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+::selection {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-title h2 {
+    font-size: 50px !important;
+    color: #1e1e1e;
+}
+
+.main-title p {
+    color: #4e4e4e;
+    font-size: 14px !important;
+}
+
+.main-title p::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 40px;
+    height: 4px;
+    background-color: var(--main-color);
+}
+
+section {
+    padding-top: var(--padding-section-top);
+    padding-bottom: var(--padding-section-bottom);
+}
+
+/* ============================================>>>>> Start Navbar <<<<================================================= */
+header nav {
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, .95);
+}
+
+header nav button.navbar-toggler {
+    box-shadow: none !important;
+    color: #FFF;
+}
+
+header nav .nav-link,
+header nav li.nav-item:hover .nav-link,
+a.nav-link.active,
+header a.navbar-brand,
+header a.navbar-brand:hover {
+    color: #fff !important;
+    /* this transition is for a.nav-link*/
+    transition: var(--main-transition);
+}
+
+header nav li.nav-item:hover .nav-link::before,
+a.nav-link.active::before {
+    width: 70%;
+}
+
+header nav .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: var(--main-transition);
+}
+
+header nav li .dropdown-item {
+    transition: var(--main-transition);
+}
+
+header nav li .dropdown-item:hover {
+    color: var(--main-color);
+}
+
+/* ========================================>>>>> Start Home Section <<<<======================================= */
+.home {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url(../imgs/hero-bg\ \(1\).jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.home h1 {
+    font-size: 70px;
+}
+
+.home p {
+    font-size: 40px;
+}
+
+.home p span {
+    animation: flash .4s infinite alternate-reverse ease-in-out;
+}
+
+
+.home .home-body h1:after {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: ' |';
+    animation: typingEffect 6s .3s both infinite linear;
+    color: var(--main-color);
+}
+
+@keyframes typingEffect {
+    0% {
+        content: ''
+    }
+
+    3% {
+        content: 'D|'
+    }
+
+    6% {
+        content: 'De|'
+    }
+
+    9% {
+        content: ' Des|'
+    }
+
+    12% {
+        content: ' Desi|'
+    }
+
+    12% {
+        content: ' Desig|'
+    }
+
+    14% {
+        content: ' Design|'
+    }
+
+    16% {
+        content: ' Designe|'
+    }
+
+    18% {
+        content: ' Designer.|'
+    }
+
+    27% {
+        content: ' Designe|'
+    }
+
+    29% {
+        content: ' Design|'
+    }
+
+    31% {
+        content: ' Desig|'
+    }
+
+    33% {
+        content: ' Desi|'
+    }
+
+    36% {
+        content: ' Des|'
+    }
+
+    39% {
+        content: ' De|'
+    }
+
+    42% {
+        content: 'D|'
+    }
+
+    45% {
+        content: ''
+    }
+
+    48% {
+        content: ' D|'
+    }
+
+    51% {
+        content: ' De|'
+    }
+
+    54% {
+        content: ' Dev|'
+    }
+
+    57% {
+        content: ' Deve|'
+    }
+
+    60% {
+        content: ' Devel|'
+    }
+
+    63% {
+        content: ' Develo|'
+    }
+
+    66% {
+        content: ' Develope|'
+    }
+
+    68% {
+        content: ' Developer.|'
+    }
+
+    79% {
+        content: ' Develope|'
+    }
+
+    81% {
+        content: ' Develop|'
+    }
+
+    83% {
+        content: ' Develo|'
+    }
+
+    86% {
+        content: ' Devel|'
+    }
+
+    89% {
+        content: ' Deve|'
+    }
+
+    92% {
+        content: ' Dev|'
+    }
+
+    95% {
+        content: ' De|'
+    }
+
+    98% {
+        content: ' D|'
+    }
+
+    100% {
+        content: ' '
+    }
+}
+
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ========================================>>>>> Start About Section <<<<======================================= */
+.about .about-box {
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 6%), 0 2px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.about .about-img ul li,
+.about .about-skills p {
+    color: #4e4e4e;
+}
+
+.about .about-content h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 25%;
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.about .about-skills .progress {
+    border-radius: 0px;
+    height: 10px;
+}
+
+/* ========================================>>>>> Start Services Section <<<<======================================= */
+.service .card {
+    border-radius: 15px;
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    border: none;
+}
+
+.service-body .card-body .icon {
+    width: 80px !important;
+    height: 80px !important;
+    border: 10px solid var(--main-color);
+    border-radius: 50%;
+    transition: var(--main-transition);
+}
+
+.service-body .box:hover .card-body .icon {
+    border: 10px solid #cde1f8;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.service-body .card-body .icon i {
+    font-size: 40px;
+}
+
+.service-body .card-body p {
+    color: #4e4e4e;
+}
+
+/* ========================================>>>>> Start Status Section <<<<======================================= */
+.status {
+    background: linear-gradient(hsl(212, 100%, 50%, .7), hsl(212, 100%, 50%, .7)), url(../imgs/counters-bg\ \(1\).jpg);
+    background-position: center 20%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.status .status-box p {
+    font-size: 16px
+}
+
+.status-box .icon {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #cde1f8;
+}
+
+/* ========================================>>>>> Start Portfolio Section <<<<======================================= */
+.portfolio .card {
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+}
+
+.portfolio .card img {
+    transition: .8s;
+    cursor: pointer;
+}
+
+.portfolio .card:hover img {
+    transform: scale(1.3)
+}
+
+.portfolio .card-info h5 {
+    font-size: 18px;
+}
+
+.portfolio .card-info p {
+    color: var(--main-color);
+    font-size: 12px;
+}
+
+.portfolio .card-info p span {
+    color: #4e4e4e;
+    font-size: 12px;
+}
+
+.portfolio .plus-icon {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--main-color);
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+/* ========================================>>>>> Start Testimonials Section <<<<======================================= */
+.testimonials {
+    background: linear-gradient(hsl(212, 100%, 50%, .4), hsl(212, 100%, 50%, .8)), url(../imgs/overlay-bg\ \(1\).jpg);
+    background-position: center 50%;
+    background-size: cover;
+}
+
+.testimonials .carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.testimonials .carousel-item img {
+    width: 140px;
+    height: 140px;
+}
+
+/* ========================================>>>>> Start BLogs Section <<<<======================================= */
+.blog .blog-body .card {
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+}
+
+.blog .blog-body .card-body p {
+    color: #4e4e4e;
+    font-size: 14px;
+}
+
+.blog .blog-body .card-body span.badge {
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.blog .card-footer small.text-dark {
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.blog .card-footer small.text-dark:hover {
+    color: var(--main-color) !important;
+}
+
+/* ========================================>>>>> Start Contact Section <<<<======================================= */
+.contact {
+    background: linear-gradient(hsl(212, 100%, 50%, .4), hsl(212, 100%, 50%, .8)), url(../imgs/overlay-bg\ \(1\).jpg);
+    background-position: center 50%;
+    background-size: cover;
+}
+
+.contact h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -20%;
+    background-color: var(--main-color);
+    width: 100px;
+    height: 3px;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+.contact-mail textarea[name="message"],
+.contact input {
+    transition: var(--main-transition);
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+.contact-mail textarea[name="message"]:focus,
+.contact input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    border-color: var(--main-color);
+}
+
+.contact-mail textarea[name="message"] {
+    height: 110px;
+    resize: none;
+}
+
+.contact-mail button {
+    background: #0078ff;
+    transition: var(--main-transition);
+}
+
+.contact-mail button:hover {
+    box-shadow: 0 0 0 4px #cde1f8;
+    opacity: .8;
+}
+
+.contact-touch ul li i {
+    color: var(--main-color);
+}
+
+.contact-touch .icon {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--main-color);
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.contact-touch .icon:hover {
+    border: 1px solid #cde1f8;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+/* ========================================>>>>> Start Footer Section <<<<======================================= */
+footer {
+    background: #0062d3;
+}
+
+footer .copy-right p {
+    margin-bottom: 5px;
+}
+
+/* ========================================>>>>> Start To Top <<<<======================================= */
+.to-top {
+    bottom: 10px;
+    background-color: #147df68d;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #cde1f8;
+    transition: var(--main-transition);
+}
+
+.to-top:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+
+/* ============>>>> Media Queries <<<<=========== */
+@media (max-width:600px) {}
+
+@media (min-width:601px) and (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width:991px) {}
+
+/* from 992 to next min */
+@media (min-width: 992px) {}
+
+/* from 1200 to ...... */
+@media (min-width: 1200px) {}
