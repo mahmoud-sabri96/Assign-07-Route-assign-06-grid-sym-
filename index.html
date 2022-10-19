@@ -100,11 +100,8 @@
         <div class="container">
             <div class="about-box  bg-white p-5 container">
                 <div class="row">
-                    <!-- Start left-Section part (left-colums) -->
                     <div class="col-lg-6 col-md-6">
-                        <!-- Start img & Skills Row -->
                         <div class="row">
-
 
                             <div class="col-lg-6 ">
                                 <img src="imgs/testimonial-2 (1).jpg" alt="" class="img-fluid rounded mb-3   ">
@@ -127,7 +124,6 @@
                             </div>
 
                         </div>
-                        <!-- End img & Skills Row -->
                         <div class="about-skills">
                             <h2 class="fs-5 mb-4 ">Skills</h2>
                             <p class="mb-0">HTML 85%</p>
@@ -156,7 +152,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Start Rigth-Section part (Right-colums)  -->
                     <div class="col-lg-6 col-md-6">
                         <div class="about-content">
                             <h2 class="position-relative mb-5">About me</h2>
@@ -197,7 +192,6 @@
             </div>
             <!-- End Main Title Component -->
 
-            <!-- <div class="container"> -->
             <div class="row service-body">
                 <div class="col-lg-4 col-md-6   text-center mb-4 box">
                     <div class="card-body card">
@@ -698,7 +692,7 @@
                                         class="bi bi-facebook fs-4"></i></a>
                                 <a class="icon me-2 d-flex justify-content-center align-items-center rounded-circle "><i
                                         class="bi bi-twitter fs-4"></i></a>
-                                <a class="icon  me-2 d-flex justify-content-center align-items-center rounded-circle "><i
+                                <a class="icon me-2 d-flex justify-content-center align-items-center rounded-circle "><i
                                         class="bi bi-instagram fs-4"></i></a>
                                 <a class="icon me-2 d-flex justify-content-center align-items-center rounded-circle "><i
                                         class="bi bi-linkedin fs-4"></i></a>
@@ -723,19 +717,17 @@
         <i class="bi bi-arrow-up fs-"></i>
     </a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- FontAwesome -->
+    <script>
+        // Start To Top-Btn
+        window.onscroll = () => {
+            if (window.scrollY >= 650) {
+                document.querySelector(".to-top").classList.replace("d-none", "d-flex")
+            } if (window.scrollY <= 650) {
+                document.querySelector(".to-top").classList.replace("d-flex", "d-none")
+            }
+        }
+    </script>
+    <!--FontAwesome -->
     <script src="fontawesome/all.min.js"></script>
     <!-- BootStrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
